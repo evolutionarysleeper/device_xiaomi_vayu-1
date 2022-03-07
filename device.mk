@@ -139,6 +139,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+PRODUCT_PACKAGES += \
+    ParanoidDoze
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sensor.proximity=true \
+    ro.sensor.pickup=xiaomi.sensor.pickup
+
 # Dex
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
